@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Futebol</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tabela de Futebol</h1>
+        <div class="form">
+            <h2>Adicionar Confronto</h2>
+            <form id="matchForm">
+                <label for="teamA">Equipe A:</label>
+                <select id="teamA" name="teamA" required>
+                    <option value="Time 1">Time 1</option>
+                    <option value="Time 2">Time 2</option>
+                    <option value="Time 3">Time 3</option>
+                    <option value="Time 4">Time 4</option>
+                </select>
+                
+                <label for="teamB">Equipe B:</label>
+                <select id="teamB" name="teamB" required>
+                    <option value="Time 1">Time 1</option>
+                    <option value="Time 2">Time 2</option>
+                    <option value="Time 3">Time 3</option>
+                    <option value="Time 4">Time 4</option>
+                </select>
+                
+                <label for="scoreA">Gols Equipe A:</label>
+                <input type="number" id="scoreA" name="scoreA" required min="0">
+                
+                <label for="scoreB">Gols Equipe B:</label>
+                <input type="number" id="scoreB" name="scoreB" required min="0">
+                
+                <button type="submit">Adicionar Confronto</button>
+            </form>
+        </div>
+
+        <div class="form">
+            <h2>Editar Nomes dos Times</h2>
+            <form id="editTeamNamesForm">
+                <label for="team1">Nome do Time 1:</label>
+                <input type="text" id="team1" name="team1" value="Time 1" required>
+                
+                <label for="team2">Nome do Time 2:</label>
+                <input type="text" id="team2" name="team2" value="Time 2" required>
+                
+                <label for="team3">Nome do Time 3:</label>
+                <input type="text" id="team3" name="team3" value="Time 3" required>
+                
+                <label for="team4">Nome do Time 4:</label>
+                <input type="text" id="team4" name="team4" value="Time 4" required>
+                
+                <button type="submit">Atualizar Nomes</button>
+            </form>
+        </div>
+
+        <div class="table-container">
+            <h2>Tabela</h2>
+            <table id="leagueTable">
+                <thead>
+                    <tr>
+                        <th>Pos</th>
+                        <th>Equipe</th>
+                        <th>P</th>
+                        <th>J</th>
+                        <th>V</th>
+                        <th>E</th>
+                        <th>D</th>
+                        <th>GP</th>
+                        <th>GC</th>
+                        <th>SG</th>
+                        <th>Últimas Partidas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Tabela dinâmica -->
+                </tbody>
+            </table>
+        </div>
+        <div class="history-container">
+            <h2>Histórico de Confrontos</h2>
+            <ul id="matchHistory">
+                <!-- Histórico de confrontos dinâmico -->
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
